@@ -32,6 +32,7 @@ body {
 }
 
 input.searchBar {
+    justify-content: left;
     border: none;
     width: 150px;
     height: 32px;
@@ -55,9 +56,22 @@ button {
     background: #1c3d52;
 }
 
+ul li {
+    background: #1c3d52;
+    margin: 5px;
+    padding: 5px;
+}
+
+li {
+    list-style-type: none;
+    text-align:left;
+
+}
+
 /* current weather section properties */
 .currentWeather {
-    margin:10px;
+    margin-top: 20px;
+    padding-top: 10px;
     text-align: left;
 }
 

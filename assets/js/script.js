@@ -27,16 +27,13 @@ function getWeather(city) {
         .then((data) => this.displayWeather(data));
 }
 
-// function saveCity(city) {}
-// grab var that is localstorage or empty array and push city to it
-//save that array to local storage
-
+// function to save recent city searches
 function saveCity(city) {
     searchCity.push(city)
     localStorage.setItem("searchCity", JSON.stringify(searchCity));
     // check if logging searched cities in console
     // console.log(searchCity);
-    for(let i = 0; i<searchCity.length; i++) {
+    for(let i = 0; i < searchCity.length; i++) {
         let target = document.querySelector("#recentSearch")
         let button = document.createElement("li")
         button.textContent = searchCity[i]
@@ -44,10 +41,6 @@ function saveCity(city) {
     }
 
 }
-
-// function displaySaveCity() {}
-
-
 
 // function to display the current weather
 function displayWeather(data) {
