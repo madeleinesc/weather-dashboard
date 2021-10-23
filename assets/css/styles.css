@@ -24,3 +24,33 @@ body {
     font-size: 20px;
     text-align: center;
 }
+
+/* search bar area properties */
+.sideBar {
+    margin-top: 10px;
+    text-align: center;
+}
+
+input.searchBar {
+    border: none;
+    width: 150px;
+    height: 32px;
+    outline: none;
+    padding: 0.5em;
+    background: #1c3d52;
+    color: #fff;
+}
+
+input {
+    color: #51acc5;
+}
+
+button {
+    margin: 0.5em;
+    border: none;
+    height: 35px;
+    width: 35px;
+    outline: none;
+    color: #51acc5;
+    background: #1c3d52;
+}
