@@ -23,3 +23,42 @@ function getWeather(city) {
         .then((response) => response.json())
         .then((data) => this.displayWeather(data));
 }
+
+// function to display the current weather
+function displayWeather(data) {
+    
+    //console.log(data);
+
+    const { name } = data; // for city mame in api
+    const { icon } = data.weather[0]; // for current weaather icon in api
+    const { temp, humidity } = data.main; // for current temp and humidity in api
+    const { speed } = data.wind; // for current wind speed in api
+    const { lat, lon } = data.coord;
+    // in console: dailyWeather.getWeather("City Name")
+    //console.log(name, icon, temp, humidity, speed, lat, lon);
+    // to get city name to display in page (using class .city)
+    document.querySelector(".city").innerText = "Today in " + name;
+    // to get icon to show in page (using class .weatherIcon)
+    document.querySelector(".weatherIcon").src = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
+    // to get temp 
+    document.querySelector(".temp").innerText = temp + "ºC";
+    // to get humidty & wind
+    document.querySelector(".wind").innerText = "Wind: " + speed + " km/h"; // not working: saying undefined
+    document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
+
+    fetch(
+        "https://api.openweathermap.org/data/2.5/onecall?lat="
+        + lat
+        + "&lon=" + lon
+        + "&units=metric&appid="
+        + apiKey
+    )
+        .then((response) => response.json(response))
+        .then((data) => {
+            const { uvi } = data.current
+            console.log(uvi)
+            document.querySelector(".uv").innerText = "UV Index: " + uvi
+
+        });
+
+}
