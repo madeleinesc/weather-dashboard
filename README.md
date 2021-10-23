@@ -33,7 +33,21 @@ For my weather dashboard, I chose to stick with simple blues for the color schem
 
 ![css color #fff](./assets/images/colorfff.png) ![blue color #51acc5](./assets/images/color51acc5.png) ![blue color #1c3d52](./assets/images/color1c3d52.png) ![blue color #0e1e2b](./assets/images/color0e1e2b.png)
 
+Below is my final weather dashboard:
+![screencapture of weather dashboard](./assets/images/weatherdashboard.png)
+
+* when the browser is opened, the user is greeted with the current day and date and a search bar to enter in a city.
+
+* once a city is entered, the city will be added to the recent search history displayed on screen.
+
+* the current weather forecast (including temp in celsius, wind speed, humidity and uv index) for that city will be displayed.
+
+* underneath the current weather, the basic forecast for that city over the next 5 days will be shown.
+
+
+My weather dashboard is also mobile responsive.
+![screencapture of mobile responsive weather dashboard](./assets/images/weatherdashboardresponsive.png)
 
 ## Final Comments
-
+I found this to be a bit of a challenge as I had not worked with third party API's before. I would like to work on this in the future and add buttons to the search list items so the user has the option to clear some of their city searches.
 
