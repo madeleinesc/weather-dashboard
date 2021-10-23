@@ -54,3 +54,23 @@ button {
     color: #51acc5;
     background: #1c3d52;
 }
+
+/* current weather section properties */
+.currentWeather {
+    margin:10px;
+    text-align: left;
+}
+
+.city {
+    color: #fff;
+}
+
+.temp {
+    font-size: 30px;
+    color: #51acc5;
+}
+
+.wind, .humidity, .uv {
+    color: #fff;
+}
+
