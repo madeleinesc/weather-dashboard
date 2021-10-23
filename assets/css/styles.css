@@ -58,6 +58,7 @@ button {
 
 ul li {
     background: #1c3d52;
+    width: 200px;
     margin: 5px;
     padding: 5px;
 }
