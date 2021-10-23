@@ -79,7 +79,7 @@ function get5day(city) {
 }
 
 function display5day(data) {
-    console.log(data)
+    //console.log(data)
 
     // index for forecast blocks (1 to 5)
     let idx = 1;
