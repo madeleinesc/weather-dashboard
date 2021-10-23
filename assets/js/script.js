@@ -63,6 +63,22 @@ function displayWeather(data) {
 
 }
 
+function get5day(city) {
+
+    fetch(
+        "https://api.openweathermap.org/data/2.5/forecast?q="
+        // + city as a parameter
+        + city
+        // temp will be in metric (celsius) as the most common in the world
+        + "&units=metric&appid="
+        + apiKey // app key
+    )
+    .then(response => response.json())
+    .then((data) => this.display5day(data));
+
+}
+
+
 // event listener for search button 
 // will take user input and return weather parameters for that city
 button.addEventListener('click', function () {
