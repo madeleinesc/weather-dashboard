@@ -3,7 +3,7 @@ var button = document.querySelector('button')
 var apiKey = "78196b2ec1caf4656d01a3423931079a"; // key to access weather api's
 
 // empty array for recent searches
-var searchCity = [];
+var searchCity = JSON.parse(localStorage.getItem("searchCity")) || [];
 
 // TODAY'S DAY AND DATE FOR JUMBOTRON 
 // set current date and time 
@@ -32,8 +32,20 @@ function getWeather(city) {
 //save that array to local storage
 
 function saveCity(city) {
+    searchCity.push(city)
     localStorage.setItem("searchCity", JSON.stringify(searchCity));
+    // check if logging searched cities in console
+    // console.log(searchCity);
+    for(let i = 0; i<searchCity.length; i++) {
+        let target = document.querySelector("#recentSearch")
+        let button = document.createElement("li")
+        button.textContent = searchCity[i]
+        target.appendChild(button)
+    }
+
 }
+
+// function displaySaveCity() {}
 
 
 
