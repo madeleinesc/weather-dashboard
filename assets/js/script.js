@@ -62,3 +62,13 @@ function displayWeather(data) {
         });
 
 }
+
+// event listener for search button 
+// will take user input and return weather parameters for that city
+button.addEventListener('click', function () {
+    var city = document.querySelector(".searchBar").value;
+
+    getWeather(city);
+
+   
+})
