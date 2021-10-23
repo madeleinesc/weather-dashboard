@@ -106,5 +106,5 @@ button.addEventListener('click', function () {
 
     getWeather(city);
 
-   
+    get5day(city);
 })
