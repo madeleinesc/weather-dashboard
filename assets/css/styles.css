@@ -74,3 +74,24 @@ button {
     color: #fff;
 }
 
+/* 5 day forecast section properties */
+.dailyForecast {
+    margin: 10px;
+    background: #1c3d52;
+    padding: 40px;
+    text-align:center;
+    width: 10%;
+    justify-content:space-evenly;
+    display: flex;
+}
+
+.dailyText {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.dayName {
+    font-size: 20px;
+    color: #fff;
+}
+
