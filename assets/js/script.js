@@ -3,7 +3,7 @@ var button = document.querySelector('button')
 var apiKey = "78196b2ec1caf4656d01a3423931079a"; // key to access weather api's
 
 // empty array for recent searches
-// var
+var searchCity = [];
 
 // TODAY'S DAY AND DATE FOR JUMBOTRON 
 // set current date and time 
@@ -30,6 +30,12 @@ function getWeather(city) {
 // function saveCity(city) {}
 // grab var that is localstorage or empty array and push city to it
 //save that array to local storage
+
+function saveCity(city) {
+    localStorage.setItem("searchCity", JSON.stringify(searchCity));
+}
+
+
 
 // function to display the current weather
 function displayWeather(data) {
@@ -111,7 +117,7 @@ function display5day(data) {
 button.addEventListener('click', function () {
     var city = document.querySelector(".searchBar").value;
 
-    //saveHistory(city)
+    saveCity(city)
     
     getWeather(city);
 
