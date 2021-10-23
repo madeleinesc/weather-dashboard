@@ -78,6 +78,26 @@ function get5day(city) {
 
 }
 
+function display5day(data) {
+    console.log(data)
+
+    // index for forecast blocks (1 to 5)
+    let idx = 1;
+
+    // 5 day forecast api is in 3hr intervals
+    // for loop to get the temp at midday for 5 days (every third interval is 12pm)
+    for(let i = 3; i < data.list.length; i += 8) {
+        // each day in short using dayName id
+        document.querySelector("#dayName" + idx).textContent = Intl.DateTimeFormat('en-AU', {weekday: 'short'}).format(new Date(data.list[i].dt_txt))
+        // weather icon for each day using dayIcon id
+        document.querySelector("#dayIcon" + idx).src = "https://openweathermap.org/img/wn/" + data.list[i].weather[0].icon + "@2x.png";
+        // daily weather in celsius using dailyTemp id
+        document.querySelector("#dailyTemp" + idx).textContent = data.list[i].main.temp + "ºC"
+        idx += 1;
+    }
+
+}
+
 
 // event listener for search button 
 // will take user input and return weather parameters for that city
