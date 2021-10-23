@@ -31,7 +31,7 @@ THEN I am again presented with current and future conditions for that city
 ## Mock up
 For my weather dashboard, I chose to stick with simple blues for the color scheme using the css colors #fff, #51acc5, #1c3d52 and #0e1e2b.
 
-![css color #fff](./assets/images/colorfff) ![blue color #51acc5](./assets/images/color51acc5) ![blue color #1c3d52](./assets/images/color1c3d52) ![blue color #0e1e2b](./assets/images/color0e1e2b)
+![css color #fff](./assets/images/colorfff.png) ![blue color #51acc5](./assets/images/color51acc5.png) ![blue color #1c3d52](./assets/images/color1c3d52.png) ![blue color #0e1e2b](./assets/images/color0e1e2b.png)
 
 
 ## Final Comments
